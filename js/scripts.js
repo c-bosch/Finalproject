@@ -1,5 +1,5 @@
-console.log('This would be the main JS file.');
-/* activate scrollspy menu */
+
+$(document).ready(function(){/* activate scrollspy menu */
 $('body').scrollspy({
   target: '#navbar-collapsible',
   offset: 50
@@ -17,4 +17,6 @@ $('a[href*=#]:not([href=#])').click(function() {
         return false;
       }
     }
+});
+
 });
