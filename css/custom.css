@@ -7,21 +7,29 @@
 	background-color:black;
     color:#fff;
 }
+.navbar-secondary{
+    background: #fefdec;
+}
 
 .navbar-trans li>a:hover,.navbar-trans li>a:focus,.navbar-trans li.active {
 	background-color:white;
 }
 .btn {
     color: white;
-    background-color: #9b9178;
+    background-color: #fefdec;
 }
 .navbar-trans a{
     color:#fefefe;
 }
 .navbar-header {
+    font-family: "BorisBlackBloxx";
+    cofefdec;
+    font-size: 35px;
+}
+.skull {
     font-family: "VeneerExtras";
-    color: #9b9178;
-    font-size: 30px;
+    color: white;
+    font-size: 20px;
 }
 .navbar-collapse {
     font-family: "HandTest";
@@ -36,16 +44,36 @@
 
 
 .logobtn {
-    margin-top: -40px;
+    margin-top: -20px;
     font-family: "VeneerExtras";
-    font-size: 100px;
+    font-size: 60px;
     color: white;
 }
+.and {
+    font-family: "VeneerExtras";
+    font-size: 70px;
+    text-shadow: 0px 2px black;
+
+}
 .titlepic {
-    margin-top: -70px;
-    font-size: 10px;
-    color:black;
-    text-align: center;
+    margin-top: -100px;
+    background: url(https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10733832_813566505367206_76581021006931511_o.jpg) repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  height: 100%;
+}
+.title {
+  color: #f1a000;
+  text-align: center;
+  text-shadow: 0 3px 3px rgba(0,0,0,.9);
+  text-transform: uppercase;
+  font-family: "BorisBlackBloxx";
+  font-size: 60px;
+  background: rgba(0,0,0,.8);
+
 }
 #top {
     background-image: url("pic.jpg");
@@ -60,13 +88,19 @@ h1 {
     font-size:50px;
     font-family: "BorisBlackBloxx";
     text-transform: uppercase;
-    color: #9b9178;
+    color: #fefdec;
     text-shadow: 0px 3px #4d4d4d;
+    text-align: center;
 }
 h6 {
     font-family: "HandTest";
     color: white;
     font-size: 30px;
+}
+h3 {
+   font-family: "HandTest";
+    color: white;
+    font-size: 30px; 
 }
   
 .well {
@@ -87,8 +121,8 @@ a.list-group-item.active,[class*='-info'] {
 }
 .monster2 {
     text-align: center;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 40%;
+    margin-left: 40%;
 }
   
 #section2 {
@@ -97,11 +131,14 @@ a.list-group-item.active,[class*='-info'] {
 }
   
 #section3 {
-	background-color: #168ccc;
+	background-color: #f1a000;
     color:#ddd;
 }
 
+#Characters{
+    background: black;
 
+}
 
 footer {
 	background-color:#494949;
