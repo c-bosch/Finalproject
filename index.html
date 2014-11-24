@@ -18,6 +18,7 @@
      @font-face { font-family: "BorisBlackBloxx"; src: url("BorisBlackBloxx.ttf");}
         @font-face { font-family: "HandTest"; src: url("HandTest.ttf");}
         @font-face { font-family: "VeneerExtras"; src: url("VeneerExtras.otf");}
+        @font-face { font-family: "SkullphabetOne" src: url("SkullphabetOne.ttf");}
 a a:link  {color:white; background-color: #9b9178}
 a:visited {color:white; background-color: #9b9178}
 a:hover   {color:#f1a000; background-color:transparent;}
@@ -64,15 +65,14 @@ a:hover {
 
     
       
-       <nav class="navbar navbar-trans" role="navigation">
+<div class="links">
     <div class="navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="Characters.html">Characters  <span class="logobtnsmall">j</span></a></li>
-        <li><a href="Comics.html">Comics  <span class="logobtnsmall">l</span></a></li>
-        <li><a href="Monsters.html">Sketches  <span class="logobtnsmall">p</span></a></li>
-      </ul>
+      <a href="Characters.html">Characters</a>
+      <a href="Comics.html">Comics</a>
+      <a href="Monsters.html">Sketches</a>
+    
   </div>
-</nav>
+</div>
   
      
 
@@ -82,17 +82,18 @@ a:hover {
   </setion>
 
 <section class="container-fluid" id="section2">
-  <div class="row">
-  	<div class="col-sm-8 col-sm-offset-2 text-center">
         <h1>About Us</h1>
         <br>
-    </div>
-  </div>
-  <div class="row">
-      <img class="img-circle" src="cathy.jpg" style="width:50px;height:50px;"></div>
+  <div class="about">
+ 
+      <img class="img-circle" src="cathy.jpg" style="width:50px;height:50px;">
       <h6>Cathy O'Malley</h6>
       <p>illustrator</p>
-</div>
+ 
+      <img class="img-circle" src="christine.jpg" style="width:50px;height:50px;">
+      <h6>Christine Bosch</h6>
+      <p>other illustrator</p>
+
 </section>
 
 <section class="container-fluid" id="section3">
@@ -105,17 +106,15 @@ a:hover {
    </div>
             <section id="contact">
         <div class="container">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <button type="submit" class="btn btn-xl"><a href="mailto:christineboschdesigns@gmail.com">Send Message</a></button>
-                            </div>
-                            <div class="col-xs-6">
-                              
-                            </div>
+                   <div class="submit">
+                     <div class="logobtnsmall">
+                               <a href="mailto:christineboschdesigns@gmail.com">p</a>
+                         
+                              </div>
+                          
 
                         </div>
-                    </form>
+                    
         </div>
     </section>
    
