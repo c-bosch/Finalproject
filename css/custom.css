@@ -1,6 +1,7 @@
 body {
 
     background: black;
+     background: url(https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10733832_813566505367206_76581021006931511_o.jpg) repeat center center fixed; 
 }
 .icon-bar {
 	background-color:#fff;
@@ -75,7 +76,7 @@ body {
 }
 .titlepic {
     margin-top: -100px;
-    background: url(https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10733832_813566505367206_76581021006931511_o.jpg) repeat center center fixed; 
+   
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -87,7 +88,6 @@ body {
   color: #f1a000;
   text-align: center;
   text-shadow: 0 3px 3px rgba(0,0,0,.9);
-  text-transform: uppercase;
   font-family: "BorisBlackBloxx";
   font-size: 60px;
   background: rgba(0,0,0,.8);
@@ -107,7 +107,7 @@ h1 {
     font-family: "BorisBlackBloxx";
     text-transform: uppercase;
     color: #fefdec;
-    text-shadow: 0px 3px #4d4d4d;
+    text-shadow: 0px 5px black;
     text-align: center;
 }
 h6 {
@@ -160,10 +160,10 @@ a.list-group-item.active,[class*='-info'] {
 
 footer {
 	background-color:black;
-    color:#ddd;
-    min-height:100px;
-    padding-top:20px;
-    padding-bottom:40px;
+    color:#f1a000;
+    font-size: 20px;
+    font-family: "HandTest";
+    min-height:40px;
 }
 
 footer .nav>li>a {
@@ -215,10 +215,10 @@ footer .nav>li>a:hover {
         margin-right: auto;
     font-family: "VeneerExtras";
     font-size: 40px;}
-    .monsters {
+.monsters {
         text-align: center;
-        background: #424345;
-    }
+        background: #302e2b;
+}
     .submit {
         text-align: center;
     }
