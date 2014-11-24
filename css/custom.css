@@ -1,4 +1,7 @@
+body {
 
+    background: black;
+}
 .icon-bar {
 	background-color:#fff;
 }
@@ -65,6 +68,11 @@
     text-align: center;
 
 }
+.excuse {
+    text-align: center;
+    margin-right: 20%;
+    margin-left: 20%;
+}
 .titlepic {
     margin-top: -100px;
     background: url(https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10733832_813566505367206_76581021006931511_o.jpg) repeat center center fixed; 
@@ -123,8 +131,8 @@ a.list-group-item.active,[class*='-info'] {
 }
   
 #section1 {
-	background-color: black;
-    background-image: url("pic.jpg");
+	background-color: #302e2b;
+
     background-repeat: no-repeat;
     background-position: right top;
     color:#dedeff;
@@ -136,12 +144,12 @@ a.list-group-item.active,[class*='-info'] {
 }
   
 #section2 {
-	background-color: #e5e5ef;
+	background-color: black;
     color:#686868;
 }
   
 #section3 {
-	background-color: #f1a000;
+	background-color: #302e2b;
     color:#ddd;
 }
 
