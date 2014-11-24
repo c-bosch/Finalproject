@@ -14,18 +14,28 @@
 		<link href="css/styles.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <style>
+
      @font-face { font-family: "BorisBlackBloxx"; src: url("BorisBlackBloxx.ttf");}
         @font-face { font-family: "HandTest"; src: url("HandTest.ttf");}
         @font-face { font-family: "VeneerExtras"; src: url("VeneerExtras.otf");}
-a a:link  {color:white; background-color: #9b9178}
-a:visited {color:white; background-color: #9b9178}
+a:link  {color:black; background-color: transparent;}
+a:visited {color:white; background-color: transparent;}
 a:hover   {color:#f1a000; background-color:transparent;}
 a:active  {color:#f1a000; background-color:transparent}
 a:hover {
     text-decoration:none;}
     </style>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Navigator Example - Jssor Slider, Slideshow</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="index.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 	</head>
 	<body>
+		<div class="monsters">
 		<nav class="navbar navbar-trans" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -33,3 +43,90 @@ a:hover {
     </div>
 </div>
 </nav>
+
+<h1>Land of the Dead</h1>
+<h6>Come for the rent, stay for the neighbors.</h6>
+
+<div class="carousel">
+    <ul>
+        <li><img src="Daveandwallace.jpg" style="width:400px;height:auto;"><h6>Dave and Wallace</h6></li>
+        <li><img src="Rorry.jpg" style="width:400px;height:auto;"><h6>Rorry</h6></li>
+        <li><img src="Russ.jpg" style="width:400px;height:auto;"><h6>Russ</h6></li>
+        <li><img src="sally.jpg" style="width:400px;height:auto;"><h6>Sally</h6></li>
+        <li><img src="burton.jpg" style="width:400px;height:auto;"><h6>Burton</h6></li>
+    </ul>
+</div>
+<div class="slidebtn">
+	<div class="container">
+		
+<a href="javascript:void(0);" class="btnPrevious">2</a>
+
+<a href="javascript:void(0);" class="btnNext">3</a>
+
+</div>
+</div>
+<script> 
+$(function(){
+        var carousel = $('.carousel ul');
+        var carouselChild = carousel.find('li');
+        var clickCount = 0;
+        var canClick = true;
+
+        itemWidth = carousel.find('li:first').width()+1; //Including margin
+
+        //Set Carousel width so it won't wrap
+        carousel.width(itemWidth*carouselChild.length);
+
+        //Place the child elements to their original locations.
+        refreshChildPosition();
+
+        //Set the event handlers for buttons.
+        $('.btnNext').click(function(){
+            if(canClick){
+                canClick = false;
+                clickCount++;
+
+                //Animate the slider to left as item width 
+                carousel.stop(false, true).animate({
+                    left : '-='+itemWidth
+                },300, function(){
+                    //Find the first item and append it as the last item.
+                    lastItem = carousel.find('li:first');
+                    lastItem.remove().appendTo(carousel);
+                    lastItem.css('left', ((carouselChild.length-1)*(itemWidth))+(clickCount*itemWidth));
+                    canClick = true;
+                });
+            }
+        });
+
+        $('.btnPrevious').click(function(){
+            if(canClick){
+                canClick = false;
+                clickCount--;
+                //Find the first item and append it as the last item.
+                lastItem = carousel.find('li:last');
+                lastItem.remove().prependTo(carousel);
+
+                lastItem.css('left', itemWidth*clickCount);             
+                //Animate the slider to right as item width 
+                carousel.finish(true).animate({
+                    left: '+='+itemWidth
+                },300, function(){
+                    canClick = true;
+                });
+            }
+        });
+
+        function refreshChildPosition(){
+            carouselChild.each(function(){
+                $(this).css('left', itemWidth*carouselChild.index($(this)));
+            });
+        }
+    });
+</script>
+
+</div>
+<footer id="footer">
+
+</footer>
+</body>

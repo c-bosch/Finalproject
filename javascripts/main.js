@@ -4,6 +4,9 @@ $('body').scrollspy({
   target: '#navbar-collapsible',
   offset: 50
 });
+$('.carousel').carousel({
+  interval: 2000
+})
 
 /* smooth scrolling sections */
 $('a[href*=#]:not([href=#])').click(function() {
