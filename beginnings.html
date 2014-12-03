@@ -1,0 +1,151 @@
+beginnings
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Section scroller template</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <style>
+
+     @font-face { font-family: "BorisBlackBloxx"; src: url("BorisBlackBloxx.ttf");}
+        @font-face { font-family: "HandTest"; src: url("HandTest.ttf");}
+        @font-face { font-family: "VeneerExtras"; src: url("VeneerExtras.otf");}
+a:link  {color:white; background-color: transparent;}
+a:visited {color:white; background-color: transparent;}
+a:hover   {color:#f1a000; background-color:transparent;}
+a:active  {color:#f1a000; background-color:transparent}
+a:hover {
+    text-decoration:none;}
+    </style>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Navigator Example - Jssor Slider, Slideshow</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="index.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	</head>
+
+	<body>
+<div class="monsters">
+		      <nav class="navbar navbar-trans" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">H<span class="skull">k</span>ME</a>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html#section1">Gallery</a></li>
+      </ul>
+  </div>
+</div>
+</nav>
+
+<h1>How C&C Began</h1>
+<h6>hint: it starts with two very bored illustration majors</h6>
+<div class="beginnings-text">
+<p>In the spring of their freshman year, Christine and Cathy, two illustration majors at Washinton University, found them selves on the same freshman dorm floor and the same freshman required courses.  The stab-your-eye-with-a-fork kind of required courses.  In their case, this took the form of Modern Art History.  Normally you might think, "Hey! Modern art! That's interesting right?"  This is what they thought as well.  They were so very, very wrong.  <br>
+	Yet in the terrible crusible of 90 minute monotone lectures, a brilliant idea was born.  Cathy and Christine began passing a sketchbook back and forth, creating communal doodles which soon became a joint commic strip that continued far beyond Art History class.  The premise of the stip has changed many times since that semester, primarily centering around their failing love lives and mutual friends, but the concept of two artist, one story remains.  
+	<br>
+	These pages here are those early doodles that Christine found in a sketchbook under her bed while looking for a lost sock.  Hope they amuse you as much as they amused their creators.</p>
+</div>
+<div class="carousel">
+    <ul>
+        <li><img src="Scan 6.jpeg" style="width:80%;height:500px;"><h6>Snuggle Bot</h6></li>
+        <li><img src="Scan 7.jpeg" style="width:80%;height:500px;"><h6>SB gets a pet</h6></li>
+        <li><img src="Scan 8.jpeg" style="width:80%;height:500px;"><h6>Fashion</h6></li>
+        <li><img src="Scan 9.jpeg" style="width:80%;height:500px;"><h6>Glitch pt. 1</h6></li>
+        <li><img src="Scan 10.jpeg" style="width:80%;height:500px;"><h6>Glitch pt. 2</h6></li>
+        <li><img src="Scan 13.jpeg" style="width:80%;height:500px;"><h6>Feelings pt. 1</h6></li>
+        <li><img src="Scan 12.jpeg" style="width:80%;height:500px;"><h6>Feelings pt. 2</h6></li>
+        <li><img src="Scan 11.jpeg" style="width:80%;height:500px;"><h6>Feelings pt. 3</h6></li>
+        <li><img src="Scan 14.jpeg" style="width:80%;height:500px;"><h6>Coffe pt. 1</h6></li>
+        <li><img src="Scan 15.jpeg" style="width:80%;height:500px;"><h6>Coffee pt. 2</h6></li>
+        <li><img src="Scan 16.jpeg" style="width:80%;height:500px;"><h6>Coffee pt. 3</h6></li>
+    </ul>
+</div>
+<div class="slidebtn">
+		
+<a href="javascript:void(0);" class="btnPrevious">    2 </a>
+
+<a href="javascript:void(0);" class="btnNext">  3</a>
+
+</div>
+</div>
+</div>
+<script> 
+$(function(){
+        var carousel = $('.carousel ul');
+        var carouselChild = carousel.find('li');
+        var clickCount = 0;
+        var canClick = true;
+
+        itemWidth = carousel.find('li:first').width()+1; //Including margin
+
+        //Set Carousel width so it won't wrap
+        carousel.width(itemWidth*carouselChild.length);
+
+        //Place the child elements to their original locations.
+        refreshChildPosition();
+
+        //Set the event handlers for buttons.
+        $('.btnNext').click(function(){
+            if(canClick){
+                canClick = false;
+                clickCount++;
+
+                //Animate the slider to left as item width 
+                carousel.stop(false, true).animate({
+                    left : '-='+itemWidth
+                },300, function(){
+                    //Find the first item and append it as the last item.
+                    lastItem = carousel.find('li:first');
+                    lastItem.remove().appendTo(carousel);
+                    lastItem.css('left', ((carouselChild.length-1)*(itemWidth))+(clickCount*itemWidth));
+                    canClick = true;
+                });
+            }
+        });
+
+        $('.btnPrevious').click(function(){
+            if(canClick){
+                canClick = false;
+                clickCount--;
+                //Find the first item and append it as the last item.
+                lastItem = carousel.find('li:last');
+                lastItem.remove().prependTo(carousel);
+
+                lastItem.css('left', itemWidth*clickCount);             
+                //Animate the slider to right as item width 
+                carousel.finish(true).animate({
+                    left: '+='+itemWidth
+                },300, function(){
+                    canClick = true;
+                });
+            }
+        });
+
+        function refreshChildPosition(){
+            carouselChild.each(function(){
+                $(this).css('left', itemWidth*carouselChild.index($(this)));
+            });
+        }
+    });
+</script>
+
+
+<footer id="footer">
+ <div class="footer">
+
+</footer>
+</body>

@@ -101,6 +101,11 @@ section {
     padding-bottom:50px; 
     min-height:calc(100% - 1px);
 }
+.beginnings-text {
+    color: white;
+    margin-right: 20%;
+    margin-left: 20%;
+}
 
 h1 {
     font-size:50px;
@@ -188,6 +193,7 @@ footer .nav>li>a:hover {
         overflow: hidden;
         height: 630px;
         position: relative;
+        padding-bottom: -20px;
     }
     .carousel ul{
    
